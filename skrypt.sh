@@ -20,6 +20,26 @@ case "$1" in
 					date >> "log""$i"/log"$i".txt
 				done
 			 fi;;
+	"--error" | "-e")i=1
+				if [ "$#" = "2" ]
+				then
+				while [ $i -le $2 ]
+				do
+					mkdir "error""$i"
+					echo "error""$i"".txt" > "error""$i"/error"$i".txt
+					echo "$0" >> "error""$i"/error"$i".txt
+					date >> "error""$i"/error"$i".txt
+					i=$[i + 1]
+				done
+				else
+				for i in {1..100}
+				do
+					mkdir "error""$i"
+					echo "error""$i"".txt" > "error""$i"/error"$i".txt
+					echo "$0" >> "error""$i"/error"$i".txt
+					date >> "error""$i"/error"$i".txt
+				done
+			 fi;;
 	"--init")repo_name=Lab4-Podstawa-praca-z-GIT
 			 git clone git@github.com:Sztefanol/$repo_name.git
 			 script_path=$(pwd)/$repo_name
