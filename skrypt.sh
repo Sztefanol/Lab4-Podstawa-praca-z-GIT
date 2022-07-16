@@ -11,7 +11,7 @@ case "$1" in
 					i=$[i + 1]
 				done
 				else
-				for i in {1..2}
+				for i in {1..100}
 				do
 					echo "log""$i"".txt" > log"$i".txt
 					echo "$0" >> log"$i".txt
