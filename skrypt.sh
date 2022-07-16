@@ -5,17 +5,19 @@ case "$1" in
 				then
 				while [ $i -le $2 ]
 				do
-					echo "log""$i"".txt" > log"$i".txt
-					echo "$0" >> log"$i".txt
-					date >> log"$i".txt
+					mkdir "log""$i"
+					echo "log""$i"".txt" > "log""$i"/log"$i".txt
+					echo "$0" >> "log""$i"/log"$i".txt
+					date >> "log""$i"/log"$i".txt
 					i=$[i + 1]
 				done
 				else
 				for i in {1..100}
 				do
-					echo "log""$i"".txt" > log"$i".txt
-					echo "$0" >> log"$i".txt
-					date >> log"$i".txt
+					mkdir "log""$i"
+					echo "log""$i"".txt" > "log""$i"/log"$i".txt
+					echo "$0" >> "log""$i"/log"$i".txt
+					date >> "log""$i"/log"$i".txt
 				done
 			 fi;;
 	"--init")repo_name=Lab4-Podstawa-praca-z-GIT
