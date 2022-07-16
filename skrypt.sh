@@ -18,7 +18,7 @@ case "$1" in
 					date >> log"$i".txt
 				done
 			 fi;;
-	"--help" | "-h")echo "$0"" --date - wyświetla aktualną datę."
-			 echo "$0"" --logs [liczba] - tworzy [liczba] plików log[n].txt zawierających swoją nazwę, nazwę skryptu i aktualną datę. Przy braku argumentu takich plików jest tworzonych 100."
-			 echo "$0"" --help - wyświetla ten komunikat.";;
+	"--help" | "-h")echo "$0"" [--date/-d] - wyświetla aktualną datę."
+			 echo "$0"" [--logs/-l] [liczba] - tworzy [liczba] plików log[n].txt zawierających swoją nazwę, nazwę skryptu i aktualną datę. Przy braku argumentu takich plików jest tworzonych 100."
+			 echo "$0"" [--help/-h] - wyświetla ten komunikat.";;
 esac
