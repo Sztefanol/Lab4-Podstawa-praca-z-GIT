@@ -1,6 +1,6 @@
 case "$1" in
-	"--date")date;;
-	"--logs")i=1
+	"--date" | "-d")date;;
+	"--logs" | "-l")i=1
 				if [ "$#" = "2" ]
 				then
 				while [ $i -le $2 ]
@@ -18,7 +18,7 @@ case "$1" in
 					date >> log"$i".txt
 				done
 			 fi;;
-	"--help")echo "$0"" --date - wyświetla aktualną datę."
+	"--help" | "-h")echo "$0"" --date - wyświetla aktualną datę."
 			 echo "$0"" --logs [liczba] - tworzy [liczba] plików log[n].txt zawierających swoją nazwę, nazwę skryptu i aktualną datę. Przy braku argumentu takich plików jest tworzonych 100."
 			 echo "$0"" --help - wyświetla ten komunikat.";;
 esac
